@@ -13,6 +13,7 @@ This project demonstrates a command-line group chat interface, and features both
 **_A Note on the AsymmetricUtility unit tests_**: To run the unit tests for AsymmetricUtility, please remove the "BC" in the `getInstance()` method in the  `AssymetricUtility.java` class when you generate the keys.
 
 ### Compilation
+In the directory with the java files do the following:
 To compile all java files:
 ```
 [Windows] javac -cp '.\extlibs\*' .\*.java
@@ -22,15 +23,15 @@ To compile all java files:
 ### The Server
 Please run the code with the following parameters:
 ```
-[Windows] java -cp '.\extlibs\*;' Server <port> <debug mode>
-[Linux] java -cp './extlibs/*;' Server <port> <debug mode>
+[Windows] java -cp '.:.\extlibs\*' Server <port> <debug mode>
+[Linux] java -cp '.:./:extlibs/*' Server <port> <debug mode>
 ```
 
 ### The Client
 Please run the code with the following parameters:
 ```
-[Windows] java -cp '.\extlibs\*;' Client <port> <hostname> <debug mode>
-[Linux] java -cp './extlibs/*;' Client <port> <hostname> <debug mode>
+[Windows] java -cp '.:.\extlibs\*' Client <port> <hostname> <debug mode>
+[Linux] java -cp '.:./:extlibs/*' Client <port> <hostname> <debug mode>
 
 ```
 
@@ -40,14 +41,14 @@ This configuration is supplied to enable easy copying and pasting as you prepare
 [Windows]
 javac -cp '.\extlibs\*' .\*.java
 
-java -cp '.\extlibs\*;' Server 8080 1
+java -cp '.:.\extlibs\*;' Server 8080 1
 
-java -cp '.\extlibs\*;' Client 8080 localhost 1
+java -cp '.:.\extlibs\*;' Client 8080 localhost 1
 
 [Linux]
 javac -cp './extlibs/*' ./*.java
 
-java -cp './extlibs/*;' Server 8080 1
+java -cp '.:./:extlibs/*' Server 8080 1
 
-java -cp './extlibs/*;' Client 8080 localhost 1
+java -cp '.:./:extlibs/*' Client 8080 localhost 1
 ```
